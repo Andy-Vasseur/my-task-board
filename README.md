@@ -2,6 +2,10 @@
 
 Welcome to **My Task Board App**, a task management application that allows you to organize your tasks by status: To Do, In Progress, Not To Do, and Completed. It's designed to help you keep track of your daily tasks efficiently.
 
+<div align="center">
+  <img src="./assets/taskboard.webp" alt="App Screenshot" width="500"/>
+</div>
+
 ## Table of Contents
 
 - [Introduction](#introduction)
