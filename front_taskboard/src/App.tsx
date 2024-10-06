@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import axios from "axios";
 import TaskBoard from "./components/TaskBoard";
 
@@ -8,12 +8,12 @@ function App() {
   const [isEditing, setIsEditing] = useState(false);
 
   // Fonction pour gérer la mise à jour du titre
-  const handleTitleChange = (e) => {
+  const handleTitleChange = (e: { target: { value: SetStateAction<string>; }; }) => {
     setTitle(e.target.value);
   };
 
   // Fonction pour envoyer le titre via une requête POST
-  const sendTitleToAPI = async (newTitle) => {
+  const sendTitleToAPI = async (newTitle: string) => {
     try {
       await axios.post("http://localhost:3310/api/title", { title: newTitle });
     } catch (error) {
